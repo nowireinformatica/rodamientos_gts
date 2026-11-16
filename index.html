@@ -73,6 +73,20 @@ section{padding:72px 0}
 .dots i{width:10px;height:10px;border-radius:50%;background:var(--line)}
 .dots i.on{background:var(--accent)}
 @media (prefers-reduced-motion:reduce){.track{scroll-behavior:auto}}
+.badge img{width:min(260px,100%);height:auto;display:block;margin:0 auto 18px}
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.formcard{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:32px}
+.formcard label{display:block;font-weight:600;margin:0 0 6px}
+.formcard .f{margin-bottom:18px}
+.formcard input[type=text],.formcard select,.formcard textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:4px;padding:12px 14px}
+.formcard textarea{min-height:110px;resize:vertical}
+.formcard input:focus,.formcard select:focus,.formcard textarea:focus{border-color:var(--accent)}
+.formcard .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.formcard .chk{display:flex;align-items:center;gap:10px;font-weight:500}
+.formcard .chk input{width:20px;height:20px;accent-color:var(--accent)}
+.formcard button.btn{border:0;font:inherit;font-weight:600;cursor:pointer;width:100%;font-size:1.05rem}
+.note{color:var(--muted);font-size:.92rem;margin:12px 0 0}
+@media (max-width:820px){.contact{grid-template-columns:1fr;gap:32px}.formcard{padding:22px}.formcard .row{grid-template-columns:1fr}}
 .skf{background:var(--dark);color:var(--on-dark)}
 .skf .in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .skf p{color:#B5C0C6;max-width:32em;margin:16px 0 0}
@@ -196,7 +210,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <h2>Distribuidor oficial SKF</h2>
         <p>Trabajamos con una de las marcas de rodamientos más reconocidas del mundo, con producto original y respaldo de fábrica.</p>
       </div>
-      <div class="badge"><strong>SKF</strong><span>Distribuidor oficial</span></div>
+      <div class="badge"><img src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjEyODAiIHdpZHRoPSIyNTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ijg1LjkzOTQwODI3NjcyIDQ0LjY5NDAxMjQwNjAyODU4IDIwMS4xMTgzNDU1MjUyODg5IDEwMS42MTIxMDY4Mjc1OTg0MSI+PHBhdGggZD0iTTI4NiAxMzQuMzgxYTEwLjg2IDEwLjg2IDAgMCAxLTEwLjg2NiAxMC44NjhIOTcuODQ1QTEwLjg1NSAxMC44NTUgMCAwIDEgODcgMTM0LjM4MVY1Ni42MThhMTAuODUzIDEwLjg1MyAwIDAgMSAxMC44NDUtMTAuODY3aDE3Ny4yODlBMTAuODU3IDEwLjg1NyAwIDAgMSAyODYgNTYuNjE4IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTk4LjE2NiA1MC4yNTRhNi42MzYgNi42MzYgMCAwIDAtNi42NDMgNi42NTh2NjUuNzE5aDE4OS45ODJ2LTY1LjU5YTYuODI2IDYuODI2IDAgMCAwLTYuNzkxLTYuNzg3IiBmaWxsPSIjMDA2OGI3Ii8+PHBhdGggZD0iTTk4LjE2NiAxNDAuNzUxYTYuNjQzIDYuNjQzIDAgMCAxLTYuNjQzLTYuNjYydi02LjkyMWgxODkuOTgydjYuNzkxYTYuODI5IDYuODI5IDAgMCAxLTYuNzkxIDYuNzkyIiBmaWxsPSIjZDgwYTMwIi8+PGcgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTE1NS43ODIgMTA0LjU0MWExLjM3MyAxLjM3MyAwIDAgMCAxLjM1OS0xLjM1OFY4My4yNzRhMS4zODQgMS4zODQgMCAwIDAtMS4zNjEtMS4zNThoLTI0Ljg3MmEuOTIyLjkyMiAwIDAgMS0uOTM4LS44OXYtNy4yNThhLjk0OS45NDkgMCAwIDEgLjkzOC0uODkzaDcuMjE1YS45NTEuOTUxIDAgMCAxIC45My44OTN2Mi4yOTJhMS4zNDkgMS4zNDkgMCAwIDAgMS4zNjIgMS4zNThoMTAuODIyYTEuMzQ0IDEuMzQ0IDAgMCAwIDEuMzYzLTEuMzU4di02LjMyN2ExLjM0MyAxLjM0MyAwIDAgMC0xLjM1OC0xLjM1N2gtMzMuNDUzYTEuMzQ1IDEuMzQ1IDAgMCAwLTEuMzYgMS4zNTdWODUuMWExLjM2MSAxLjM2MSAwIDAgMCAxLjM2IDEuMzU5aDI0Ljg3NWEuODg5Ljg4OSAwIDAgMSAuODkxLjg4OXYxMS43NmEuODg3Ljg4NyAwIDAgMS0uODkxLjg4OGgtMTYuM2EuODg2Ljg4NiAwIDAgMS0uODkzLS44ODh2LTYuNzYzQTEuMzQ3IDEuMzQ3IDAgMCAwIDEyNC4xMTMgOTFoLTEwLjg2OGExLjM1NCAxLjM1NCAwIDAgMC0xLjM1OCAxLjM0M3YxMC44MzhhMS4zNTcgMS4zNTcgMCAwIDAgMS4zNTggMS4zNThNMTc5LjcyMSA5MS41MzhjMC0uMTE3LjE0Ni0uMjEyLjI1OS0uMjEyYS4xMy4xMyAwIDAgMSAuMTI1LjA3NmwxMi43IDEyLjY0OWExLjMwNSAxLjMwNSAwIDAgMCAxLjA1Ny40OWgxNi4xNjhhMS4zNDIgMS4zNDIgMCAwIDAgMS4zNi0xLjM1OFY5Mi4zNjJhMS4zNDEgMS4zNDEgMCAwIDAtMS4zNi0xLjM1NmgtMTEuNjc4YTEuMzQ2IDEuMzQ2IDAgMCAxLTEuMDYtLjUzMmwtOC4zNzYtOC4zODNjLS4wNjktLjAyNC0uMDgzLS4xLS4wODMtLjE3NWEuMTI4LjEyOCAwIDAgMSAuMDgzLS4xMjhsMy44My0zLjg4YTEuNDQgMS40NCAwIDAgMSAxLjA1NC0uNDloMTEuNzMyYTEuMzcyIDEuMzcyIDAgMCAwIDEuMzU4LTEuMzU4di02LjMyN2ExLjM3NCAxLjM3NCAwIDAgMC0xLjM1OC0xLjM1N2gtMTEuNjc1YTEuMzEgMS4zMSAwIDAgMC0xLjA1Ny40ODlsLTEyLjcgMTIuNjQ5YS4yNTQuMjU0IDAgMCAxLS4xMjUuMDgyLjI2OS4yNjkgMCAwIDEtLjI1OS0uMjU2VjY5LjczM2ExLjM0NSAxLjM0NSAwIDAgMC0xLjM1OC0xLjM1N2gtMTMuMDY2YTEuMzQzIDEuMzQzIDAgMCAwLTEuMzU4IDEuMzU3djEwLjgyM2ExLjM0MyAxLjM0MyAwIDAgMCAxLjM1OCAxLjM2LjkuOSAwIDAgMSAuODkxLjkzNnY3LjIxNWEuOTMxLjkzMSAwIDAgMS0uODkxLjkzNSAxLjMzOSAxLjMzOSAwIDAgMC0xLjM1OCAxLjM0M3YxMC44MzhhMS4zNDIgMS4zNDIgMCAwIDAgMS4zNTggMS4zNThoMTMuMDcxYTEuMzQ0IDEuMzQ0IDAgMCAwIDEuMzU4LTEuMzU4TTIzMi42NTEgMTA0LjU0MWExLjM0NCAxLjM0NCAwIDAgMCAxLjM2LTEuMzU4VjkyLjM0NWExLjM0MSAxLjM0MSAwIDAgMC0xLjM2LTEuMzQ1LjkyOC45MjggMCAwIDEtLjg4OS0uOTM1di0yLjcxN2EuODg2Ljg4NiAwIDAgMSAuODg5LS44ODloNC45NjVhLjg4Ni44ODYgMCAwIDEgLjg4Ny44ODkgMS4zNzMgMS4zNzMgMCAwIDAgMS4zNiAxLjM2aDEwLjg3OGExLjM0MiAxLjM0MiAwIDAgMCAxLjM1NS0xLjM2di02LjMyMmExLjM0NCAxLjM0NCAwIDAgMC0xLjM1NS0xLjM1OGgtMTAuODc4YTEuMzc1IDEuMzc1IDAgMCAwLTEuMzYgMS4zNTguODg3Ljg4NyAwIDAgMS0uODg3Ljg5aC00Ljk2NWEuODg3Ljg4NyAwIDAgMS0uODg5LS44OXYtNy4yNThhLjkxMy45MTMgMCAwIDEgLjg4OS0uODkzaDE0LjAxMWEuOTU1Ljk1NSAwIDAgMSAuOTM0Ljg5M3YyLjI5MmExLjM0NiAxLjM0NiAwIDAgMCAxLjM2MSAxLjM1OGgxNS4zNjhhMS4zNDQgMS4zNDQgMCAwIDAgMS4zNTgtMS4zNTh2LTYuMzI3YTEuMzQ2IDEuMzQ2IDAgMCAwLTEuMzU4LTEuMzU3aC00NC43ODhhMS4zNDIgMS4zNDIgMCAwIDAtMS4zNTYgMS4zNTd2MTAuODIzYTEuMzQyIDEuMzQyIDAgMCAwIDEuMzU2IDEuMzYuOTA1LjkwNSAwIDAgMSAuODkzLjkzNnY3LjIxNWEuOTMxLjkzMSAwIDAgMS0uODkzLjkzNSAxLjMzOCAxLjMzOCAwIDAgMC0xLjM1NiAxLjM0M3YxMC44MzhhMS4zNDEgMS4zNDEgMCAwIDAgMS4zNTYgMS4zNTgiLz48L2c+PC9zdmc+" alt="SKF" width="260" height="133"><span>Distribuidor oficial</span></div>
     </div>
   </section>
 
@@ -218,14 +232,29 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </section>
 
   <section id="contacto" style="padding-top:0">
-    <div class="wrap">
-      <h2>Consultá por WhatsApp</h2>
-      <p class="lead">Mandanos la medida o el código del rodamiento, o la marca y modelo del vehículo o equipo. Hacemos envíos a todo el país.</p>
-      <a class="btn" href="https://wa.me/5491158871197">WhatsApp 11 5887-1197</a>
-      <div class="social">
-        <a class="btn ghost" href="https://www.facebook.com/gtsrodamientos">Facebook</a>
-        <a class="btn ghost" href="https://www.instagram.com/rodamientos.gts/">Instagram</a>
+    <div class="wrap contact">
+      <div>
+        <h2>Consultá por WhatsApp</h2>
+        <p class="lead">Completá el formulario y se abre WhatsApp con tu consulta lista para enviar. Hacemos envíos a todo el país.</p>
+        <a class="btn" href="https://wa.me/5491158871197">WhatsApp 11 5887-1197</a>
+        <div class="social">
+          <a class="btn ghost" href="https://www.facebook.com/gtsrodamientos">Facebook</a>
+          <a class="btn ghost" href="https://www.instagram.com/rodamientos.gts/">Instagram</a>
+        </div>
       </div>
+      <form class="formcard" id="wf" novalidate>
+        <div class="row">
+          <div class="f"><label for="wf-nombre">Nombre</label><input type="text" id="wf-nombre" autocomplete="name" required></div>
+          <div class="f"><label for="wf-suc">Sucursal</label><select id="wf-suc"><option>Indistinto</option><option>Wilde</option><option>Bernal</option></select></div>
+        </div>
+        <div class="f"><label for="wf-tipo">Tipo de consulta</label><select id="wf-tipo"><option>Automotor</option><option>Industria</option><option>Agro</option><option>Transporte pesado</option><option>Otro</option></select></div>
+        <div class="f"><label for="wf-det">Código o medida del rodamiento, o vehículo/equipo</label><input type="text" id="wf-det" placeholder="Ej.: 6203 2RS, o Ford Ka 2012 rueda delantera" required></div>
+        <div class="f"><label for="wf-msg">Comentarios (opcional)</label><textarea id="wf-msg"></textarea></div>
+        <div class="f"><label class="chk"><input type="checkbox" id="wf-env"> Necesito envío al interior</label></div>
+        <div class="f" id="wf-locw" hidden><label for="wf-loc">Localidad y provincia</label><input type="text" id="wf-loc"></div>
+        <button class="btn" type="submit">Enviar por WhatsApp</button>
+        <p class="note" id="wf-note" role="status">Se abre WhatsApp con el mensaje armado; no se guarda nada en esta página.</p>
+      </form>
     </div>
   </section>
 </main>
@@ -250,6 +279,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   n.onclick=function(){t.scrollBy({left:step()})};
   t.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
   t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){n.click();e.preventDefault()}if(e.key==='ArrowLeft'){p.click();e.preventDefault()}});
+})();
+</script>
+<script>
+(function(){
+  var f=document.getElementById('wf');if(!f)return;
+  var $=function(i){return document.getElementById(i)};
+  $('wf-env').addEventListener('change',function(){$('wf-locw').hidden=!this.checked});
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=$('wf-nombre').value.trim(),d=$('wf-det').value.trim(),note=$('wf-note');
+    if(!n||!d){note.textContent='Completá tu nombre y el código, medida o vehículo.';(!n?$('wf-nombre'):$('wf-det')).focus();return}
+    var m='Hola, soy '+n+'. Quiero consultar por: '+$('wf-tipo').value+'.\n'+
+      'Código/medida/equipo: '+d+'\n'+'Sucursal: '+$('wf-suc').value;
+    var c=$('wf-msg').value.trim();if(c)m+='\nComentarios: '+c;
+    if($('wf-env').checked){var l=$('wf-loc').value.trim();m+='\nEnvío al interior: Sí'+(l?' ('+l+')':'')}
+    var u='https://wa.me/5491158871197?text='+encodeURIComponent(m);
+    note.innerHTML='Si WhatsApp no se abrió, <a href="'+u+'" target="_blank" rel="noopener">tocá acá para enviarlo</a>.';
+    window.open(u,'_blank','noopener');
+  });
 })();
 </script>
 </body>
